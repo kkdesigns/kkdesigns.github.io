@@ -13,7 +13,7 @@
   "license": "ISC",
   "author": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tailwind": "npx @tailwindcss/cli --cwd ./src -o tailwind.css"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
