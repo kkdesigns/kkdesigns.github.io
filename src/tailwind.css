@@ -14,6 +14,7 @@
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-2xl: 42rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
@@ -199,9 +200,45 @@
     width: calc(1 / 4 * 100%);
     height: calc(1 / 4 * 100%);
   }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
+  .size-8 {
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
+  }
+  .size-10 {
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
+  }
+  .size-12 {
+    width: calc(var(--spacing) * 12);
+    height: calc(var(--spacing) * 12);
+  }
+  .size-14 {
+    width: calc(var(--spacing) * 14);
+    height: calc(var(--spacing) * 14);
+  }
+  .size-16 {
+    width: calc(var(--spacing) * 16);
+    height: calc(var(--spacing) * 16);
+  }
   .size-\[50vw\] {
     width: 50vw;
     height: 50vw;
+  }
+  .size-\[60vw\] {
+    width: 60vw;
+    height: 60vw;
+  }
+  .size-\[70vw\] {
+    width: 70vw;
+    height: 70vw;
+  }
+  .size-\[75vw\] {
+    width: 75vw;
+    height: 75vw;
   }
   .size-full {
     width: 100%;
@@ -209,6 +246,9 @@
   }
   .h-1\/2 {
     height: calc(1 / 2 * 100%);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
   }
   .h-full {
     height: 100%;
@@ -225,8 +265,17 @@
   .w-1\/2 {
     width: calc(1 / 2 * 100%);
   }
+  .w-2xl {
+    width: var(--container-2xl);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
   .min-w-1\/2 {
     min-width: calc(1 / 2 * 100%);
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .flex-col {
     flex-direction: column;
@@ -251,6 +300,15 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
+  }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
@@ -302,6 +360,12 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-\[url\(\.\.\/assets\/kk\.svg\)\] {
+    background-image: url(../assets/kk.svg);
+  }
+  .bg-\[url\(\.\/\.\.\/assets\/kk\.svg\)\] {
+    background-image: url(./../assets/kk.svg);
   }
   .p-1 {
     padding: var(--spacing);
@@ -397,6 +461,26 @@
     text-decoration-line: underline;
   }
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -413,6 +497,11 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-tracking: initial;
